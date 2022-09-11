@@ -70,6 +70,7 @@ a, a:hover {
 	}
 
   .postcard__title {
+    color: #ffff;
     font-size: 1.75rem;
   }
 
@@ -112,10 +113,10 @@ a, a:hover {
     flex-flow: row wrap;
     font-size: 14px;
     margin: 30px 0 0 0;
-	padding: 0;
+	  padding: 0;
     justify-content: center;
 
-    .tag__item {
+  .tag__item {
       display: inline-block;
       background: rgba(83, 83, 83, 0.4);
       border-radius: 3px;
