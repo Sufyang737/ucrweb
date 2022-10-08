@@ -40,7 +40,7 @@ a, a:hover {
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
   border-radius: 10px;
   margin: 0 0 2rem 0;
-  overflow: hidden;
+  overflow: hidden;fluid
   position: relative;
   color: #ffffff;
 
