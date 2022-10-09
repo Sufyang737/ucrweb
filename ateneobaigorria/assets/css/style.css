@@ -7,7 +7,8 @@
 
 body{
     font-family: Roboto, "Helvetica Neue",;
-    background: linear-gradient(90deg, #D2E1F7 0%, #326ABA 100%);
+    background-color: white;
+    /*background: linear-gradient(90deg, #D2E1F7 0%, #326ABA 100%);*/
 }
 
 
