@@ -80,7 +80,6 @@ a, a:hover {
     object-fit: cover;
     position: relative;
   }
-
   .postcard__img_link {
     display: contents;
   }
