@@ -11,6 +11,9 @@ body{
 }
 
 
+
+
+
 .dark {
 	background: #110f16;
 }
@@ -30,6 +33,10 @@ a, a:hover {
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.5rem;
+}
+
+.gestiones_vecindales{
+  background-color: #3700ff;
 }
 
 /* Cards */
@@ -361,10 +368,11 @@ a, a:hover {
 
 
 .section_2{
-    border: 2px solid rgba(255, 255, 255, 0);
+    /*border: 2px solid rgba(255, 255, 255, 0);*/
     padding-top: 30px;
     padding-bottom: 30px;
-    background: linear-gradient(90deg, rgba(218, 230, 231, 0.39) 0%, #326ABA 100%);
+    background: #f2f2f2;  /* fallback for old browsers */
+
 }
 
 .section_2 img{
@@ -377,8 +385,18 @@ div [class^="col-"]{
     padding-right:10px;
 }
 .card{
+    border-radius: 10px;
     transition:0.5s;
     cursor:pointer;
+    background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.card a{
+  color: #ffffff;
 }
 .card-title{  
     padding-left: 15px;
@@ -389,7 +407,7 @@ div [class^="col-"]{
 
 .card:hover{
     transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.726);
 }
 .card-text{
     height:90px;  
