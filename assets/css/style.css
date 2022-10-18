@@ -83,7 +83,6 @@ a, a:hover {
 
   .postcard__img {
     max-height: 180px;
-    width: 100%;
     object-fit: cover;
     position: relative;
   }
