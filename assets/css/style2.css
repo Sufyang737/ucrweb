@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Roboto, "Helvetica Neue",;
+    background-color: rgb(233, 224, 224);
+}
+
+/***** gestión vecinal *****/
+.gestiones_vecindales{
+    background-color: rgb(0, 146, 243);
+    border-radius: 40px 40px 0px 0px;
+}
+.img-gestion{
+    width: 200px;
+    height: 200px;
+    border-radius: 40px 0px 40px 0px;
+}
+
+.img-gestion-cordinador{
+    width: 250px;
+}
+
+/*card principal */
+.postcard {
+    flex-wrap: wrap;
+    display: flex;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;fluid
+    position: relative;
+    color: #ffffff;
+ 
+}
+.card {
+    width: 300px;
+    height: 300px;
+    background: #f5f5f5;
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(35,35,35,0.3);
+    transition: box-shadow .3s ease-in-out;
+   }
+   
+   .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+   }
+   
+   /*Image*/
+   .card-img {
+    position: absolute;
+    transition: transform .4s ease-in-out;
+    z-index: 2;
+   }
+   
+   /*Buttons*/
+   .social-media {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    transform: translateY(-200%);
+    z-index: 3;
+   }
+   
+   .social-media li {
+    background: #f5f5f5;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in;
+   }
+   
+   /*Text*/
+   .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: black;
+   }
+   
+   .subtitle {
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    color: black;
+   }
+
+   .parrafo{
+    color: black;
+   }
+   
+   ul {
+    list-style: none;
+   }
+   
+   svg {
+    --size: 25px;
+    width: var(--size);
+    height: var(--size);
+    fill: #252525;
+   }
+   
+   /* Hover */
+   .card:hover {
+    box-shadow: 1px 2px 10px rgba(35,35,35,0.5);
+   }
+   
+   .card:hover .card-img {
+    transform: translateY(-30%);
+   }
+   
+   .card:hover .social-media li {
+    transform: translateY(-5%);
+    opacity: 1;
+   }
+   
+   .card:hover .social-media li:nth-child(1) {
+    transition-delay: 0s;
+   }
+   
+   .card:hover .social-media li:nth-child(2) {
+    transition-delay: .1s;
+   }
+   
+   .card:hover .social-media li:nth-child(3) {
+    transition-delay: .2s;
+   }
+
+
+.blog_entry {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    position: relative; }
+
+.blog_entry img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px; 
+}
+.blog_entry h3 {
+    font-size: 18px; 
+}
+.blog_entry h3 a {
+        color: #000000; 
+}
+.blog_entry .date {
+    color: #999999;
+    display: block;
+    font-size: .9rem;
+    margin-bottom: 15px; }
+.blog_entry .more a {
+    position: relative;
+    color: #e84545;
+    padding-bottom: 10px; }
+
+.blog_entry:hover {
+    -webkit-box-shadow: 0 15px 30px -7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px -7px rgba(0, 0, 0, 0.2); 
+}
+
+/***** Footer *****/
+.footer-top { 
+    padding: 40px 0; text-align: left; color: #fff; color: rgba(255, 255, 255, 0.8); 
+}
+.footer-top h3 { 
+    padding-bottom: 10px; color: #fff; 
+}
+
+.footer-about img.logo-footer { 
+    max-width: 300px;
+}
+
+.footer-contact p { 
+    word-wrap: break-word; 
+}
+.footer-contact i { 
+    padding-right: 10px;  font-size: 18px; color: #fff; color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links a { 
+    color: #fff; color: rgba(255, 255, 255, 0.8); border: 0; 
+}
+.footer-links a:hover, .footer-links a:focus { 
+    color: #fff; 
+}
+
+.footer-bottom { 
+    padding: 15px 0 17px 0; background: #444; text-align: left; color: #aaa; 
+}
+
+.footer-social { 
+    padding-top: 3px; text-align: right; 
+}
+.footer-social a { 
+    margin-left: 20px; color: #777; border: 0; 
+}
+.footer-social a:hover, .footer-social a:focus { 
+    color: #1b0c53; border: 0; 
+}
+.footer-social i { 
+    font-size: 24px; vertical-align: middle; 
+}
