@@ -1,4 +1,29 @@
+@media screen and (min-width: 1024px){
+	.postcard__text {
+  padding: 2rem 3.5rem;
+}
+	
+	.postcard__text:before {
+  content: "";
+  position: absolute;
+  display: block;
+  
+  top: -20%;
+  height: 130%;
+  width: 55px;
+}
 
+.postcard.dark {
+	.postcard__text:before {
+		background: #18151f;
+	}
+}
+.postcard.light {
+	.postcard__text:before {
+		background: #e1e5ea;
+	}
+}
+}
 @media (min-width: 992px) and (max-width: 1199px) {
 
 	.section-1-box .section-1-box-icon { width: 60px; height: 60px; font-size: 32px; line-height: 60px; }
@@ -20,6 +45,111 @@
 	.footer-top { padding: 40px 0; }
 	.footer-contact i { padding-right: 5px; }
 
+}
+@media screen and (min-width: 769px) {
+	.postcard {
+	  flex-wrap: inherit;
+  
+	  .postcard__title {
+		font-size: 2rem;
+	  }
+  
+	  .postcard__tagbox {
+		justify-content: start;
+	  }
+  
+	  .postcard__img {
+		  
+		  transition: transform 0.3s ease;
+	  }
+  
+	  .postcard__text {
+		padding: 3rem;
+		width: 100%;
+	  }
+  
+	  .media.postcard__text:before {
+		content: "";
+		position: absolute;
+		display: block;
+		background: #18151f;
+		top: -20%;
+		height: 130%;
+		width: 55px;
+	  }
+  
+	  &:hover .postcard__img {
+		transform: scale(1.1);
+	  }
+  
+	  &:nth-child(2n+1) {
+		flex-direction: row;
+	  }
+  
+	  &:nth-child(2n+0) {
+		flex-direction: row-reverse;
+	  }
+  
+	  &:nth-child(2n+1) .postcard__text::before {
+		left: -12px !important;
+		transform: rotate(4deg);
+	  }
+  
+	  &:nth-child(2n+0) .postcard__text::before {
+		right: -12px !important;
+		transform: rotate(-4deg);
+	  }
+	}
+  }
+  
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
 }
 
 @media (max-width: 767px) {

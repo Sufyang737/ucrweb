@@ -1,12 +1,8 @@
-/*! Backstretch - v2.0.4 - 2013-06-19
-* http://srobbin.com/jquery-plugins/backstretch/
-* Copyright (c) 2013 Scott Robbin; Licensed MIT */
 
 ;(function ($, window, undefined) {
   'use strict';
 
-  /* PLUGIN DEFINITION
-   * ========================= */
+
 
   $.fn.backstretch = function (images, options) {
     // We need at least one image or method name
@@ -14,10 +10,7 @@
       $.error("No images were supplied for Backstretch");
     }
 
-    /*
-     * Scroll the page one pixel to get the right window height on iOS
-     * Pretty harmless for everyone else
-    */
+    
     if ($(window).scrollTop() === 0 ) {
       window.scrollTo(0, 0);
     }
@@ -26,22 +19,21 @@
       var $this = $(this)
         , obj = $this.data('backstretch');
 
-      // Do we already have an instance attached to this element?
+     
       if (obj) {
 
-        // Is this a method they're trying to execute?
+        
         if (typeof images == 'string' && typeof obj[images] == 'function') {
-          // Call the method
+
           obj[images](options);
 
-          // No need to do anything further
+         
           return;
         }
 
-        // Merge the old options with the new
+        
         options = $.extend(obj.options, options);
 
-        // Remove the old instance
         obj.destroy(true);
       }
 
@@ -50,21 +42,17 @@
     });
   };
 
-  // If no element is supplied, we'll attach to body
   $.backstretch = function (images, options) {
-    // Return the instance
+
     return $('body')
             .backstretch(images, options)
             .data('backstretch');
   };
 
-  // Custom selector
   $.expr[':'].backstretch = function(elem) {
     return $(elem).data('backstretch') !== undefined;
   };
 
-  /* DEFAULTS
-   * ========================= */
 
   $.fn.backstretch.defaults = {
       centeredX: true   // Should we center the image on the X axis?
@@ -73,12 +61,7 @@
     , fade: 0           // Speed of fade transition between slides
   };
 
-  /* STYLES
-   * 
-   * Baked-in styles that we'll apply to our elements.
-   * In an effort to keep the plugin simple, these are not exposed as options.
-   * That said, anyone can override these in their own stylesheet.
-   * ========================= */
+
   var styles = {
       wrap: {
           left: 0
@@ -323,18 +306,7 @@
       }
   };
 
-  /* SUPPORTS FIXED POSITION?
-   *
-   * Based on code from jQuery Mobile 1.1.0
-   * http://jquerymobile.com/
-   *
-   * In a nutshell, we need to figure out if fixed positioning is supported.
-   * Unfortunately, this is very difficult to do on iOS, and usually involves
-   * injecting content, scrolling the page, etc.. It's ugly.
-   * jQuery Mobile uses this workaround. It's not ideal, but works.
-   *
-   * Modified to detect IE6
-   * ========================= */
+
 
   var supportsFixedPosition = (function () {
     var ua = navigator.userAgent
@@ -350,26 +322,26 @@
       , ieversion = !!iematch && iematch[ 1 ];
 
     return !(
-      // iOS 4.3 and older : Platform is iPhone/Pad/Touch and Webkit version is less than 534 (ios5)
+     
       ((platform.indexOf( "iPhone" ) > -1 || platform.indexOf( "iPad" ) > -1  || platform.indexOf( "iPod" ) > -1 ) && wkversion && wkversion < 534) ||
       
-      // Opera Mini
+
       (window.operamini && ({}).toString.call( window.operamini ) === "[object OperaMini]") ||
       (operammobilematch && omversion < 7458) ||
       
-      //Android lte 2.1: Platform is Android and Webkit version is less than 533 (Android 2.2)
+
       (ua.indexOf( "Android" ) > -1 && wkversion && wkversion < 533) ||
       
-      // Firefox Mobile before 6.0 -
+
       (ffversion && ffversion < 6) ||
       
-      // WebOS less than 3
+
       ("palmGetResource" in window && wkversion && wkversion < 534) ||
       
-      // MeeGo
+
       (ua.indexOf( "MeeGo" ) > -1 && ua.indexOf( "NokiaBrowser/8.5.0" ) > -1) ||
       
-      // IE6
+
       (ieversion && ieversion <= 6)
     );
   }());
